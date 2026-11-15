@@ -1,0 +1,52 @@
+classDiagram
+    class Appointable {
+        <<interface-like abstract>>
+        +scheduleAppointment(dateTime)
+        +cancelAppointment(appointmentId)
+    }
+    class PatientRecord {
+        <<abstract>>
+        -id : string
+        -name : string
+        -age : int
+        -contact : string
+        +category()*
+        +careNote()*
+        +clone()*
+    }
+    class GeneralPatient
+    class EmergencyPatient
+    class FollowUpPatient
+    class Appointment {
+        +id : int
+        +patientId : string
+        +dateTime : string
+        +reason : string
+        +status : string
+    }
+    class ClinicManager {
+        -patients : vector~unique_ptr~PatientRecord~~
+        -appointments : vector~Appointment~
+        -waiting : queue~string~
+        -undo : stack~Snapshot~
+        -recent : array~PatientRecord*,10~
+    }
+    class SearchEngine {
+        +linearSearchById()
+        +binarySearchById()
+        +recursiveSearchByName()
+        +selectionSort()
+        +insertionSort()
+    }
+    class FileHandler
+    class MainWindow
+    Appointable <|.. PatientRecord
+    PatientRecord <|-- GeneralPatient
+    PatientRecord <|-- EmergencyPatient
+    PatientRecord <|-- FollowUpPatient
+    ClinicManager "1" o-- "*" PatientRecord : stores
+    ClinicManager "1" o-- "*" Appointment : manages
+    Appointment "*" --> "1" PatientRecord : patientId association
+    MainWindow --> ClinicManager : uses
+    MainWindow --> SearchEngine : invokes
+    MainWindow --> FileHandler : persistence
