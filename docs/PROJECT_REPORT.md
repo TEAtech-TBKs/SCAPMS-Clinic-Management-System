@@ -14,7 +14,7 @@ The application supports patient registration, editing and deletion. A patient c
 
 ### 4. Data structures
 - **Vector:** stores registered patients and appointments. It supports dynamic growth as records are added or removed.
-- **Queue:** stores patient IDs waiting for consultation. FIFO ordering reflects the normal waiting-room process.
+- **Queue:** stores patient IDs waiting for consultation. FIFO ordering reflects the normal waiting-room processs.
 - **Stack:** stores snapshots of the patient and appointment data before administrative changes. The most recent snapshot is restored first, implementing undo in last-in-first-out order.
 - **Fixed-size array:** a ten-element array caches pointers to the first ten patient records for a small frequently accessed record cache. The cache is refreshed when patient storage changes.
 
