@@ -2,7 +2,7 @@
 ## COS202 Programming II — Lab Assessment Report
 
 ### 1. Project description
-The Smart Clinic Appointment & Patient Management System is a C++17 desktop application designed for a university clinic. It provides a graphical interface for registering and managing patient records, scheduling and cancelling appointments, maintaining a first-in-first-out waiting queue, searching and sorting records, saving/loading data and producing simple clinic reports. The GUI is developed with Qt Widgets, while the application logic is separated into model, controller and utility components.
+The Smart Clinic Appointment & Patient Management System is a C++17 desktop application designed for a university clinic. It provides a graphical interface for registering and managing patient records, scheduling and cancelling appointments, maintaining a first-in-first-out waiting queue, searching and sorting records, saving/loading data and producing simple clinic reports. The GUI is developed with Qt Widgets, while the application logic is separated into model, controller and utility components..
 
 ### 2. System features
 The application supports patient registration, editing and deletion. A patient can be classified as General, Emergency or Follow-Up. Appointments can be scheduled for registered patients and pending appointments can be cancelled. The waiting queue follows FIFO order: the first patient added is the first patient called. The dashboard displays the number of registered patients, pending appointments and emergency patients. Reports show category distribution, pending appointments and an appointment-status summary. The user can save and load the clinic data through file dialogs.

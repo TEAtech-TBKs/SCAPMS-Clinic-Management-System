@@ -7,7 +7,8 @@ find_package(Qt6 COMPONENTS Widgets QUIET)
 if(Qt6_FOUND)
     set(QT_LIB Qt6::Widgets)
 else()
-    find_package(Qt5 COMPONENTS Widgets REQUIRED)
+    find_package(Qt5 COMPONENTS
+     Widgets REQUIRED)
     set(QT_LIB Qt5::Widgets)
 endif()
 add_executable(SCAPMS
